@@ -16,7 +16,6 @@ function limpiartexto(){
 }
 
 function copiado(){
-    mostrarAlerta();
 
     let texto = document.getElementById('mostrarResultado').innerText;
     navigator.clipboard.writeText(texto);     
@@ -43,9 +42,9 @@ function encriptador(){
     let textoEncriptado = ''; 
     encripto = false;
 
-    if( mensaje == ""){
+    if( mensaje == ""){ // verifica si el cuadro de texto está vacío.
         mensaje = msjEncriptado.innerText;
-        console.log(mensaje);
+        console.log('No hay nada escrito');
     }
 
     for (let i = 0; i < mensaje.length; i++) { // Recorre todo el input y el valor se guarda en la variable "char".
@@ -67,7 +66,6 @@ function encriptador(){
     if (encripto){
         limpiartexto();
     }
-    mostrarAlerta();
     msjEncriptado.innerText = textoEncriptado; 
 
     // cambios de estilos css
@@ -89,9 +87,9 @@ function desencriptador() {
     let textoDesencriptado = "";
     encripto = false;
     
-    if( mensajeActual == ""){
+    if( mensajeActual == ""){ // verifica si el cuadro de texto está vacío.
         mensajeActual = msjFinal.innerText;
-        console.log(mensajeActual);
+        console.log('No hay nada escrito');
     }
 
     while(vueltas != mensajeActual.length){
@@ -127,7 +125,6 @@ function desencriptador() {
 
         limpiartexto();
     }
-    mostrarAlerta();
     //cambios de estilos css
     document.getElementById('mostrarResultado').style.display = "block";
     document.getElementById('texto').style.display = "none";
