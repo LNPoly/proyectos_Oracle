@@ -1,0 +1,184 @@
+/*estilos globales*/
+
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: dimgray;
+    background-image: url(imagenes/fondo_oscuro.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+    height: max-content;
+}
+
+/*encabezado*/
+
+.banner{
+    border-bottom: solid 3px black;
+    display: flex;
+    justify-content: space-around;
+}
+img{
+    margin: 15px 0;
+}
+
+.titulo{
+
+    font-size: 30px;
+    margin: 15px 0;
+    padding: 7px 10px;
+    text-shadow: 3px 3px 3px black;
+}
+
+/*main*/
+
+.bloqueEncriptador{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.enunciado{
+    font-size: 18px;
+    margin: 15px auto;
+}
+.caja-texto{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    gap: 25px;
+}
+
+#muneco{
+    width: 45%;
+}
+
+.bloqueEncriptador .areaTexto, .parrafoDesencriptado{
+
+    width: 80%;
+    height: 180px;
+    font-size: 15px;
+    padding: 10px;
+    margin: 15px auto;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: ghostwhite;
+    border: solid dimgray 1px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    resize: none;
+}
+
+.parrafoDesencriptado{
+    
+    display: none;
+    
+}
+
+/*botones*/
+
+.caja-botones{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.caja-botones .boton{
+    width: 150px;
+    font-size: 13px;
+    color: ghostwhite;
+    padding: 13px;
+    margin: 0 15px;
+    border-color:ghostwhite 1px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+#btn-encriptar, #btn-desencriptar{
+    display: block;
+}
+#btn-copiar{
+    display: none;
+}
+
+/*footer*/
+
+.copyrigth{
+    padding: 10px 0;
+    margin-top: 5vh;
+    border-top: solid 3px black;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 10px 0;
+    gap: 40px;
+        
+}
+.links li a{
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 279px) and (max-height: 654px) {
+
+    .banner{
+        border-bottom: solid 1px black;
+    }
+
+    .titulo{
+        font-size: 18px;
+        padding: 5px 8px;
+        text-shadow: 3px 3px 3px black;
+    }
+
+    img{
+        width: 20%;
+        margin: 15px 0;
+    }
+    .enunciado{
+        font-size: 12px;
+        margin: 10px auto;
+    }
+
+    #muneco{
+        display: none;
+    }
+
+    .caja-texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin: 10px auto;
+    }
+
+    .copyrigth{
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 10vh;
+        border-top: solid 3px black;
+    }
+    
+    .links{
+        list-style: none;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin: 10px 0;
+        gap: 40px;
+            
+    }
+    .textoFooter{
+        font-size: 12px;
+    }
+}
