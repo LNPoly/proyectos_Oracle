@@ -21,7 +21,7 @@ function copiado(){
     navigator.clipboard.writeText(texto);     
     alert("texto copiado");
     
-    if (encripto){
+    if (encripto){ // verifica si el cuadro de texto está vacío.
         limpiartexto();
     }
 
@@ -63,7 +63,7 @@ function encriptador(){
         textoEncriptado += char; 
         }
     }
-    if (encripto){
+    if (encripto){ // verifica si el cuadro de texto está vacío.
         limpiartexto();
     }
     msjEncriptado.innerText = textoEncriptado; 
@@ -135,5 +135,4 @@ function desencriptador() {
     document.getElementById('btn-encriptar').style.display = "block";
 
     return msjFinal.innerText = textoDesencriptado;
-    
 }

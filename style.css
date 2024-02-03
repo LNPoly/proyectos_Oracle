@@ -5,24 +5,35 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: dimgray;
+    
     background-image: url(imagenes/fondo_oscuro.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: sticky;
+
+    background-color: rgb(65, 63, 63);
     height: max-content;
 }
 
 /*encabezado*/
 
+header{
+
+    width: 100%;
+    height: 10%;
+
+}
+
 .banner{
-    border-bottom: solid 3px black;
+    border-bottom: solid 2px black;
     display: flex;
     justify-content: space-around;
 }
-img{
-    margin: 15px 0;
+
+.logoAlura{
+    margin-top: 1%;
 }
 
 .titulo{
@@ -35,34 +46,57 @@ img{
 
 /*main*/
 
+body{
+    
+    width: 100vw;
+    height: 100vh;
+    max-width: 1240px;
+    max-height: 1024px;
+    margin: auto;
+}
+
+main{
+    
+    height: 80%;
+    width: 100%;    
+}
+
 .bloqueEncriptador{
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     
 }
+
 .enunciado{
     font-size: 18px;
     margin: 15px auto;
 }
+
 .caja-texto{
-    width: 50%;
+    width: 100%;
+    height: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin: 10px;
     gap: 25px;
 }
-
-#muneco{
-    width: 45%;
+.caja-input{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    gap: 20px;    
 }
 
-.bloqueEncriptador .areaTexto, .parrafoDesencriptado{
+#muneco{
+    width: 60%;
+}
+.areaTexto, .parrafoDesencriptado{
 
-    width: 80%;
-    height: 180px;
+    width: 100%;
+    height: 80%;
     font-size: 15px;
     padding: 10px;
     margin: 15px auto;
@@ -72,6 +106,7 @@ img{
     border: solid dimgray 1px;
     border-radius: 15px;
     box-shadow: 5px 5px 5px black;
+
     word-wrap: break-word;
     overflow-x: hidden;
     resize: none;
@@ -79,8 +114,7 @@ img{
 
 .parrafoDesencriptado{
     
-    display: none;
-    
+    display: none;   
 }
 
 /*botones*/
@@ -88,8 +122,10 @@ img{
 .caja-botones{
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    width: 100%;
+    height: 8%;
 }
+
 .caja-botones .boton{
     width: 150px;
     font-size: 13px;
@@ -100,9 +136,11 @@ img{
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
 }
+
 #btn-encriptar, #btn-desencriptar{
     display: block;
 }
+
 #btn-copiar{
     display: none;
 }
@@ -110,19 +148,14 @@ img{
 /*footer*/
 
 .piePag{
+
     display: flex;
-    margin-top: 17%;
+    height: 10%;
+    width: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-}
-
-.copyrigth{
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 5vh;
-    border-top: solid 3px black;
 }
 
 .links{
@@ -130,72 +163,108 @@ img{
     display: flex;
     justify-content:center;
     align-items: center;
-    margin: 10px 0;
     gap: 40px;
-        
+           
 }
 .links li a{
-    margin-top: 50px;
     text-decoration: none;
 }
+.textoFooter{
+    margin: 5px;
+}
 
-@media screen and (min-width: 280px) and (max-width: 653px) {
 
-    .banner{
-        display: flex;
-        justify-content: flex-start;
-        border-bottom: none;
+@media screen and (Width:1440px) and (Height:1024px){ /*desktop*/
+
+    header{
+        height: 15%;
+    
+    }
+    
+    .titulo{
+        font-size: 30px;
     }
 
-    .titulo{
+    /*main*/
+
+    main{
+        
+        height: 70%;    
+    }    
+
+    #muneco{
+        height: 50%;
+    }
+
+    .piePag{
+
+        height: 15%;
+    }
+}
+
+@media screen and (max-Width:768px) and (max-Height:1174px) { /*tablet*/
+    
+    /*encabezado*/
+
+    header{
+
+        height: 20%;
+    
+    }
+    img{
         display: none;
     }
 
-    img{
-        width: 20%;
-        padding-top: 20px;
+    .titulo{
+        font-size: 30px;
     }
+
     /*main*/
 
-    .bloqueEncriptador{
-        height: 100%;
-    }
-    .enunciado{
-        font-size: 12px;
-        margin: 10px auto;
-    }
+    main{
+        
+        height: 60%;    
+    }    
 
     #muneco{
-        display:none;
+        height: 40%;
     }
 
-    .caja-texto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 60%;
-        margin: 10px auto;
-    }
+    .piePag{
 
-    /*Footer*/
-
-    .copyrigth{
-        width: 100%;
-        padding: 10px 0;
-        margin-top: 10vh;
-        border-top: solid 3px black;
+        height: 20%;
     }
+}
+@media screen and (Width:375px) and (Height:993px){ /*celular*/
+
+     /*encabezado*/
+
+     header{
+
+        height: 25%;
     
-    .links{
-        list-style: none;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        margin: 10px 0;
-
-            
     }
-    .textoFooter{
-        font-size: 12px;
+    img{
+        display: none;
+    }
+
+    .titulo{
+        font-size: 25px;
+    }
+
+    /*main*/
+
+    main{
+        
+        height: 50%;    
+    }    
+
+    #muneco{
+        height: 30%;
+    }
+
+    .piePag{
+
+        height: 25%;
     }
 }
