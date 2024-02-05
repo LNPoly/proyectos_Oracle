@@ -18,9 +18,11 @@ function limpiartexto(){
 function copiado(){
 
     let texto = document.getElementById('mostrarResultado').innerText;
-    navigator.clipboard.writeText(texto);     
-    alert("texto copiado");
-    
+    navigator.clipboard.writeText(texto)
+    .then(() => {
+            alert("Texto copiado exitosamente");  
+    })   
+ 
     if (encripto){ // verifica si el cuadro de texto está vacío.
         limpiartexto();
     }
