@@ -33,6 +33,7 @@ function copiado(){
     document.getElementById('mostrarResultado').style.display = "none";
     document.getElementById('btn-copiar').style.display = "none";
     document.getElementById('btn-encriptar').style.display = "block";
+    document.getElementById('btn-desencriptar').style.display = "block";
     document.getElementById('aclaracion').style.display = "block";
     
 }
