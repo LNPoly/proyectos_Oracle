@@ -9,28 +9,34 @@
 <body>
     <header>
         <nav class="banner">
-            <img class="logoAlura" src="imagenes/Frame 6.png">
+            <a href="index.html">
+                <img class="logoAlura" src="imagenes/Frame 6.png">
+            </a>
             <h1 class="titulo">Encriptador de texto</h1>
         </nav>
     </header>
     <main>
-        <div class="bloqueEncriptador">
-            <div class="caja-texto">
-                <p class="enunciado" id="aclaracion">* Escribe sólo en minúsculas y sin acentos.</p>
-                <div class="caja-input">
-                    <textarea class="areaTexto" name="areaTexto" id="texto" cols="30" rows="10" placeholder="escribe aqui"onkeypress="return ( event.charCode >= 32 && event.charCode <= 47 || event.charCode >= 97 && event.charCode <= 122)"></textarea>
-                    <p class="parrafoDesencriptado" id="mostrarResultado"></p>
-                    <img id="muneco" src="imagenes/Muñeco.png">
+        <section class="section1">
+            <div class="caja-input">
+                <div class="aclaracionTexto">
+                    <p class="enunciado" id="aclaracion">* Escribe sólo en minúsculas y sin acentos.</p>
+                    <textarea class="areaTexto" name="areaTexto" id="texto" cols="30" rows="10" placeholder="escribe aqui"onkeypress="return ( event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32)"></textarea>
                 </div>
-                <div class="caja-botones">
-                    <button class="boton" id="btn-encriptar" onclick="encriptador()">Encriptar</button>
-                    <button class="boton" id="btn-desencriptar" onclick="desencriptador()">Desencriptar</button>
-                    <button class="boton" id="btn-copiar" onclick="copiado()">Copiar</button>
-                </div>    
+                <img id="muneco" src="imagenes/Muñeco.png">
             </div>
-        </div>
-    </main>
-    <footer class="piePag">
+        </section>
+        <section class="section2">
+            <div class="caja-output">
+                <p class="parrafoDesencriptado" id="mostrarResultado"></p>
+            </div>
+        </section>
+            <div class="caja-botones">
+                <button class="boton" id="btn-encriptar" onclick="encriptador()">Encriptar</button>
+                <button class="boton" id="btn-desencriptar" onclick="desencriptador()">Desencriptar</button>
+                <button class="boton" id="btn-copiar" onclick="copiado()">Copiar</button>
+            </div>          
+        </main>
+    <footer>
         <div class="copyrigth">
             <ul class="links">
                 <li>
