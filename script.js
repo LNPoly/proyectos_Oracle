@@ -29,12 +29,13 @@ function copiado(){
 
     //Cambios de estilos css
     document.getElementById('texto').style.display = "block";
-    document.getElementById('muneco').style.display = "block";
     document.getElementById('mostrarResultado').style.display = "none";
     document.getElementById('btn-copiar').style.display = "none";
     document.getElementById('btn-encriptar').style.display = "block";
     document.getElementById('btn-desencriptar').style.display = "block";
     document.getElementById('aclaracion').style.display = "block";
+    document.getElementById('muneco').removeAttribute('hidden');
+    
     
 }
 
@@ -74,11 +75,12 @@ function encriptador(){
     // cambios de estilos css
     document.getElementById('mostrarResultado').style.display = "block";
     document.getElementById('texto').style.display = "none";
-    document.getElementById('muneco').style.display = "none";
     document.getElementById('aclaracion').style.display = "none";
     document.getElementById('btn-copiar').style.display = "block";
     document.getElementById('btn-encriptar').style.display = "none";
     document.getElementById('btn-desencriptar').style.display = "block";
+
+    document.getElementById('muneco').setAttribute('hidden','false');
 
 }
 
@@ -131,11 +133,11 @@ function desencriptador() {
     //cambios de estilos css
     document.getElementById('mostrarResultado').style.display = "block";
     document.getElementById('texto').style.display = "none";
-    document.getElementById('muneco').style.display = "none";
     document.getElementById('aclaracion').style.display = "none";
     document.getElementById('btn-copiar').style.display = "block";
     document.getElementById('btn-desencriptar').style.display = "none";
     document.getElementById('btn-encriptar').style.display = "block";
+    document.getElementById('muneco').setAttribute('hidden','false');
 
     return msjFinal.innerText = textoDesencriptado;
 }
